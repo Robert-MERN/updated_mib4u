@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    background-color: rgb(24 24 27);
+    overflow-x: hidden;
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+body::-webkit-scrollbar{
+  width: 7px;
+}
+body::-webkit-scrollbar-track{
+  background-color: rgb(63 63 70);
+}
+body::-webkit-scrollbar-thumb{
+  background: rgb(91,33,182);
+  background: linear-gradient(45deg, rgba(91,33,182,1) 0%, rgba(22,78,99,1) 100%);
+  border-radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input ~p{
+  display: none;
+}
+input:invalid[focused="true"] ~ p{
+  display: block;
+  animation: fadein 0.5s ease-in-out;
+}
+textarea ~p{
+  display: none;
+}
+textarea:invalid[focused="true"] ~ p{
+  display: block;
+  animation: fadein 0.5s ease-in-out;
+}
+select ~p{
+  display: none;
+}
+select:invalid[focused="true"] ~ p{
+  display: block;
+  animation: fadein 0.5s ease-in-out;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+    transform: translateY(-14px);
+	}
+
+	to {
+    opacity: 1;
+    transform: translateY(0);
+	}
+}
+
+/* selection */
+
+p::-moz-selection{
+	background: rgb(20, 204, 204);
+}
+p::selection{
+  background: rgb(20, 204, 204);
+}
+h1::-moz-selection{
+  background: rgb(20, 204, 204);
+}
+h1::selection{
+	background: rgb(20, 204, 204);
+}
+h2::-moz-selection{
+	background: rgb(20, 204, 204);
+}
+h2::selection{
+	background: rgb(20, 204, 204);
+}
+li::-moz-selection{
+	background: rgb(20, 204, 204);
+}
+li::selection{
+	background: rgb(20, 204, 204);
+}
+input::-moz-selection{
+	background: rgb(20, 204, 204);
+}
+input::selection{
+	background: rgb(20, 204, 204);
+}
+td::-moz-selection{
+	background: rgb(20, 204, 204);
+}
+td::selection{
+	background: rgb(20, 204, 204);
+}
+img::-moz-selection{
+	background: rgb(20, 204, 204);
+}
+img::selection{
+	background: rgb(20, 204, 204);
+}
+label::-moz-selection{
+	background: rgb(20, 204, 204);
+}
+label::selection{
+	background: rgb(20, 204, 204);
+}
+select::-moz-selection{
+	background: rgb(20, 204, 204);
+}
+select::selection{
+	background: rgb(20, 204, 204);
+}
+a::-moz-selection{
+	background: rgb(20, 204, 204);
+}
+a::selection{
+	background: rgb(20, 204, 204);
+}
+
